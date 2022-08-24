@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: url("../images/bg-header-desktop.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (max-width: 576px) {
+  body {
+    background-image: url("../images/bg-header-mobile.png");
+  }
+}
+
+.section-container {
+  @apply max-w-6xl mx-auto text-center px-10;
+}
+@layer base {
+  h3 {
+    @apply text-6xl font-bold;
+  }
+  p {
+    @apply max-w-3xl text-2xl text-grayishBlue font-semibold mx-auto;
+  }
+}
+.button-container {
+  @apply rounded-full text-center text-xl font-bold px-8 py-4 duration-300 hover:opacity-80;
+}
+.heading-border {
+  @apply border-b-2 opacity-0 duration-200 group-hover:opacity-100 border-pink-300 mx-auto max-w-xs mt-4;
+}
